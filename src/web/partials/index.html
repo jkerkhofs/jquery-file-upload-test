@@ -1,0 +1,38 @@
+<div id="main" class="container" ng-controller="AccountMetadataController">
+    <div class="row" ng-if="unauthorized()">
+        <div class="col-xs-12">
+            <a ng-href="#!{{localePrefix}}/signin">
+                <i class="fa fa-user fa-fw"></i> Login
+            </a>
+        </div>
+    </div>
+    <div ng-if="authorized()" ng-controller="TestUploadController">
+        <form ng-submit="submit()" file-upload="options">
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="file" multiple>
+
+                </div>
+            </div>
+            <div class="row" ng-repeat="file in queue">
+                <div class="col-xs-4">
+                    <div file-upload-preview="file"></div>
+                </div>
+                <div class="col-xs-8">
+                    <p class="name" ng-switch on="!!file.url">
+                    <span ng-switch-when="true">
+                <a ng-href="{{file.url}}" title="{{file.name}}" download="{{file.name}}">{{file.name}}</a>
+                </span>
+                        <span ng-switch-default>{{file.name}}</span>
+                    </p>
+                    <strong ng-show="file.error" class="error text-danger">{{file.error}}</strong>
+                </div>
+            </div>
+            <div class="row" ng-if="queue.length > 0">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success">Upload</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

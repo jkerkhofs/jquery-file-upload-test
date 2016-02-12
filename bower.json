@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "dependencies": {
+    "binarta.basic.app.angular": "v0.*.*"
+  },
+  "resolutions": {
+    "angular": "1.3.*"
+  }
+}

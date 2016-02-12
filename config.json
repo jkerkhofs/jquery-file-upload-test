@@ -1,0 +1,36 @@
+{
+  "appName": "test",
+  "debugControlsEnabled": false,
+  "debugInfoEnabled": false,
+  "robots": "noindex,nofollow",
+  "jsSources": {
+    "default": {
+      "jquery.fileupload-angular": "bower_components/jquery-file-upload/js/jquery.fileupload-angular.js",
+      "load-image": "bower_components/blueimp-load-image/js/load-image.all.min.js",
+      "jquery.ui.widget": "bower_components/jquery-file-upload/js/vendor/jquery.ui.widget.js",
+      "jquery.fileupload": "bower_components/jquery-file-upload/js/jquery.fileupload.js",
+      "jquery.fileupload-process": "bower_components/jquery-file-upload/js/jquery.fileupload-process.js",
+      "jquery.fileupload-image": "bower_components/jquery-file-upload/js/jquery.fileupload-image.js",
+      "jquery.fileupload-validate": "bower_components/jquery-file-upload/js/jquery.fileupload-validate.js",
+      "app": "src/web/scripts/app.js"
+    }
+  },
+  "sources": [
+    "src/web/metadata.json"
+  ],
+  "stylesUrl": "styles/app.css",
+  "javascriptUrl": "scripts/libs.js",
+  "environments": {
+    "dev": {
+      "binartaBaseUri": "http://binarta.app.binarta.dev.thinkerit.be/",
+      "debugControlsEnabled": true,
+      "debugInfoEnabled": true
+    },
+    "demo":{
+      "binartaBaseUri": "http://binarta.app.binarta.demo.thinkerit.be/"
+    },
+    "prod": {
+      "binartaBaseUri": "https://binarta.com/"
+    }
+  }
+}
